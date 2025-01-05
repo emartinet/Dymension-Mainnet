@@ -47,7 +47,7 @@ source $HOME/.bash_profile
 
 ### Varyasyonlar
 ```
-echo "export DYMENSION_PORT="39"" >> $HOME/.bash_profile
+echo "export DYMENSION_PORT="205"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 ### Binary build
@@ -99,7 +99,7 @@ sudo systemctl enable dymd.service
 ```
 ### Ayalamalar
 ```
-dymd config node tcp://localhost:${DYMENSION_PORT}657
+dymd config node tcp://localhost:${DYMENSION_PORT}57
 dymd config chain-id dymension_1100-1
 dymd config keyring-backend file
 ```
@@ -114,20 +114,9 @@ curl -Ls http://37.120.189.81/dymension_mainnet/addrbook.json > $HOME/.dymension
 ```
 ### Port
 ```
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${DYMENSION_PORT}317\"%;
-s%^address = \":8080\"%address = \":${DYMENSION_PORT}080\"%;
-s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${DYMENSION_PORT}090\"%; 
-s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${DYMENSION_PORT}091\"%; 
-s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:${DYMENSION_PORT}545\"%; 
-s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:${DYMENSION_PORT}546\"%" $HOME/.dymension/config/app.toml
-```
-```
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${DYMENSION_PORT}658\"%; 
-s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://0.0.0.0:${DYMENSION_PORT}657\"%; 
-s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${DYMENSION_PORT}060\"%;
-s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${DYMENSION_PORT}656\"%;
-s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${DYMENSION_PORT}656\"%;
-s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${DYMENSION_PORT}660\"%" $HOME/.dymension/config/config.toml
+sed -i -e "s%:1317%:20517%; s%:8080%:20580%; s%:9090%:20590%; s%:9091%:20591%; s%:8545%:20545%; s%:8546%:20546%; s%:6065%:20565%" $HOME/.dymension/config/app.toml
+sed -i -e "s%:26658%:20558%; s%:26657%:20557%; s%:6060%:20560%; s%:26656%:20556%; s%:26660%:20561%" $HOME/.dymension/config/config.toml
+
 ```
 ### Puring
 ```
