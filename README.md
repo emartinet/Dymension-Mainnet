@@ -56,7 +56,7 @@ cd $HOME
 rm -rf dymension
 git clone https://github.com/dymensionxyz/dymension.git
 cd dymension
-git checkout v3.2.0
+git checkout v3.1.0
 ```
 ```
 make build
@@ -65,6 +65,20 @@ make build
 mkdir -p $HOME/.dymension/cosmovisor/genesis/bin
 mv build/dymd $HOME/.dymension/cosmovisor/genesis/bin/
 rm -rf build
+```
+```
+cd $HOME
+rm -rf dymension
+git clone https://github.com/dymensionxyz/dymension.git
+cd dymension
+git checkout v3.2.0
+```
+```
+make build
+```
+```
+mkdir -p $HOME/.dymension/cosmovisor/upgrades/v4/bin
+mv build/dymd $HOME/.dymension/cosmovisor/upgrades/v4/bin/
 ```
 ### System Link
 ```
