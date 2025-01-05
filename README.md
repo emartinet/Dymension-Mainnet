@@ -80,6 +80,7 @@ make build
 mkdir -p $HOME/.dymension/cosmovisor/upgrades/v4/bin
 mv build/dymd $HOME/.dymension/cosmovisor/upgrades/v4/bin/
 ```
+
 ### System Link
 ```
 ln -s $HOME/.dymension/cosmovisor/genesis $HOME/.dymension/cosmovisor/current -f
