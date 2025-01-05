@@ -25,15 +25,15 @@ go version
 ```
 ```
 sudo rm -rvf /usr/local/go/
-wget https://golang.org/dl/go1.21.13.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.21.13.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.22.7.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.22.7.linux-amd64.tar.gz
 rm go1.19.3.linux-amd64.tar.gz
 ```
 Not: go version çıktısı alamazsanız altakini deneyin.
 ```
 cd $HOME
 ! [ -x "$(command -v go)" ] && {
-VER="1.21.13"
+VER="1.22.7"
 wget "https://golang.org/dl/go$VER.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf "go$VER.linux-amd64.tar.gz"
