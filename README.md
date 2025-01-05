@@ -159,7 +159,7 @@ dymd keys add cüzdan-adı --recover
 ### Create Validator
 ```
 dymd tx staking create-validator \
---amount 1000000adym \
+--amount 1000000000000000000adym \
 --pubkey $(dymd tendermint show-validator) \
 --moniker "YOUR_MONIKER_NAME" \
 --identity "YOUR_KEYBASE_ID" \
